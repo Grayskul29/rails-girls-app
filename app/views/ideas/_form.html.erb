@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="field" style="width: 300px;">
+    <%= form.text_field :name, class:"form-control", placeholder:"Name" %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <br/>
+  <div class="field" style="width: 500px;">
+    <%= form.text_area :description, class:"form-control", placeholder:"Description" %>
   </div>
-
+  <br/>
   <div class="field">
     <%= form.label :picture %>
     <%= form.file_field :picture %>
   </div>
 
+  <br/>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-dark"%>
   </div>
 <% end %>
