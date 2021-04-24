@@ -2,7 +2,9 @@
 
 <h1>Comments</h1>
 
-<table>
+<table class="table" background-image = "https://scontent.facc6-1.fna.fbcdn.net/v/t1.6435-9/177528763_504102037615420_5787067911912946205_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=0debeb&_nc_eui2=AeHCqZxuLLmpvDWk13mtFkWoxnWAZ-NqUJzGdYBn42pQnAdW4sa8KrCVbHOUQlli9-y-bi2opy3hh-gCmoG4Wqmt&_nc_ohc=nY89QJgMMYcAX8XypC3&_nc_ht=scontent.facc6-1.fna&oh=bcacb601f6f8ae351cabcba6c3793b43&oe=60AB62BB">
+  <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
+
   <thead>
     <tr>
       <th>User name</th>
@@ -16,7 +18,8 @@
     <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.user_name %></td>
-        <td><%= comment.body %></td>
+        <td><%= comment.body %>
+        </td>
         <td><%= comment.idea_id %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
